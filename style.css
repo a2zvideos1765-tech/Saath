@@ -428,7 +428,7 @@ body { animation: pageFadeIn 0.8s ease-in forwards; }
 
 /* Media Queries */
 @media (max-width: 768px) {
-  .container { padding: 0 8vw; }
+  .container { padding: 0 12vw; }
   .section-pad { padding: 5rem 0; }
   .navbar { padding: 2rem 8vw; }
   .hero { 

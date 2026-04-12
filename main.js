@@ -101,8 +101,13 @@ document.addEventListener('DOMContentLoaded', () => {
           el.addEventListener('mouseleave', () => cursorRing.classList.remove('hovered'));
       });
   } else {
-      // Mobile Touch Flare Effect
-      document.addEventListener('touchstart', (e) => {
+      // Mobile Interactions
+      let isSwiping = false;
+      
+      document.addEventListener('touchstart', (e) => { 
+          isSwiping = true; 
+          
+          // Tap Flare
           const touch = e.touches[0];
           const flare = document.createElement('div');
           flare.className = 'touch-flare';
@@ -111,10 +116,43 @@ document.addEventListener('DOMContentLoaded', () => {
           
           document.body.appendChild(flare);
           
-          // Clean up after animation finishes (0.5s)
-          setTimeout(() => {
-              flare.remove();
-          }, 500);
+          // Safe animation across all mobile browsers
+          flare.animate([
+              { transform: 'translate(-50%, -50%) scale(1)', opacity: 1, borderColor: 'var(--garnet-reserve)' },
+              { transform: 'translate(-50%, -50%) scale(4)', opacity: 0, borderColor: 'transparent' }
+          ], { duration: 500, easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)' }).onfinish = () => flare.remove();
+          
+      }, { passive: true });
+      
+      document.addEventListener('touchend', (e) => { isSwiping = false; }, { passive: true });
+      
+      let lastSparkTime = 0;
+      document.addEventListener('touchmove', (e) => {
+          if (!isSwiping) return;
+          const now = Date.now();
+          if (now - lastSparkTime < 40) return; // Rate limit the particles
+          lastSparkTime = now;
+          
+          const touch = e.touches[0];
+          const spark = document.createElement('div');
+          spark.className = 'touch-spark';
+          spark.style.left = `${touch.clientX}px`;
+          spark.style.top = `${touch.clientY}px`;
+          
+          document.body.appendChild(spark);
+          
+          // Random scatter physics
+          const angle = Math.random() * Math.PI * 2;
+          const velocity = 30 + Math.random() * 60;
+          const tx = Math.cos(angle) * velocity;
+          const ty = Math.sin(angle) * velocity;
+          
+          // Web Animations API guarantees execution without CSS variable rendering bugs
+          spark.animate([
+              { transform: 'translate(-50%, -50%) scale(1)', opacity: 1 },
+              { transform: `translate(calc(-50% + ${tx}px), calc(-50% + ${ty}px)) scale(0)`, opacity: 0 }
+          ], { duration: 600, easing: 'cubic-bezier(0, 0.9, 0.9, 1)' }).onfinish = () => spark.remove();
+          
       }, { passive: true });
   }
 
