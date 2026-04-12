@@ -141,9 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
           
           document.body.appendChild(spark);
           
-          // Random scatter physics
+          // Random scatter physics (bigger, faster burst)
           const angle = Math.random() * Math.PI * 2;
-          const velocity = 30 + Math.random() * 60;
+          const velocity = 60 + Math.random() * 100;
           const tx = Math.cos(angle) * velocity;
           const ty = Math.sin(angle) * velocity;
           
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
           spark.animate([
               { transform: 'translate(-50%, -50%) scale(1)', opacity: 1 },
               { transform: `translate(calc(-50% + ${tx}px), calc(-50% + ${ty}px)) scale(0)`, opacity: 0 }
-          ], { duration: 600, easing: 'cubic-bezier(0, 0.9, 0.9, 1)' }).onfinish = () => spark.remove();
+          ], { duration: 800, easing: 'cubic-bezier(0, 0.9, 0.9, 1)' }).onfinish = () => spark.remove();
           
       }, { passive: true });
   }
