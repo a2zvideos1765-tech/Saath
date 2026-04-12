@@ -19,6 +19,11 @@
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -27,7 +32,6 @@ body {
   font-family: var(--font-body);
   transition: background-color var(--transition-speed) var(--transition-easing), 
               color var(--transition-speed) var(--transition-easing);
-  overflow-x: hidden;
   line-height: 1.6;
 }
 
@@ -435,7 +439,7 @@ body { animation: pageFadeIn 0.8s ease-in forwards; }
   
   .menu-toggle { display: flex; }
   .nav-links {
-    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    position: fixed; top: 0; left: 0; width: 100%; height: 100dvh;
     background-color: var(--almond-cream) !important; 
     flex-direction: column; justify-content: center; align-items: center;
     gap: 2.5rem; opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
