@@ -323,7 +323,7 @@ body.theme-garnet .menu-toggle .bar { background-color: var(--almond-cream); }
 }
 
 /* Sections */
-.section-pad { padding: 8rem 0; position: relative; z-index: 2; }
+.section-pad { padding-top: 8rem; padding-bottom: 8rem; position: relative; z-index: 2; }
 .section-title {
   font-size: clamp(2.5rem, 6vw, 4rem);
   margin-bottom: 1.5rem;
@@ -429,9 +429,9 @@ body { animation: pageFadeIn 0.8s ease-in forwards; }
 
 /* Media Queries */
 @media (max-width: 768px) {
-  .container { padding: 0 12vw; }
-  .section-pad { padding: 5rem 0; }
-  .navbar { padding: 2rem 8vw; }
+  .container { padding: 0 6vw; }
+  .section-pad { padding-top: 5rem; padding-bottom: 5rem; }
+  .navbar { padding: 2rem 6vw; }
   .hero { 
     min-height: 100svh; 
     padding-top: 25vh; 
