@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saath & Co - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body class="theme-almond">
+    <div class="swirl-overlay"></div>
+    <nav class="navbar">
+      <a href="/" class="logo magnetic">SAATH & CO</a>
+      <div class="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/portfolio/">Portfolio</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <main>
+      <section class="container hero"> <!-- No theme-trigger here -->
+        <div class="gradient-aura" style="top: 50%; left: 80%;"></div>
+        <div class="content anim-target fade-up">
+          <h1 class="headline reveal-text gradient-text">Bold thinking. <br>Strategic design. <br>Impactful brands.</h1>
+          <p class="subheadline">Creating brands for today, shaping identities for tomorrow.</p>
+          <a href="/contact/" class="cta-button magnetic">Start Your Journey with Saath &Co.</a>
+        </div>
+      </section>
+
+      <section class="container section-pad">
+        <div class="image-hero anim-target scale-up" style="overflow: hidden;">
+          <img src="/agency_hero.png" alt="Saath & Co Studio" class="parallax-bg" data-speed="0.15">
+        </div>
+      </section>
+      
+      <!-- Theme Trigger placed below the fold, after reading the hero/image -->
+      <section class="container section-pad theme-trigger" id="agency-brief">
+        <div class="content anim-target fade-up">
+          <h2 class="section-title reveal-text">Clarity → Identity → Connection</h2>
+          <p class="section-text" style="max-width: 600px;">
+            Designing brands that are built to be remembered.<br><br>
+            At Saath & Co, we don’t just build brands — we shape how they are seen, felt, and remembered. Every brand we work with is approached with intention. We combine strategy, design, and storytelling with bold creativity to create work that is both purposeful and powerful.
+          </p>
+          
+          <div class="split-layout" style="margin-top: 4rem;">
+            <div class="card anim-target fade-left">
+              <h3>Intentionality</h3>
+              <p>Crafted to avoid the noise and hone in on clear, authentic voice aesthetics.</p>
+            </div>
+            <div class="card anim-target fade-right">
+              <h3>Purposeful Design</h3>
+              <p>Harmonized visual systems that translate strategy into tactile reality.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section-pad theme-trigger" id="contact" style="text-align: center;">
+        <div class="content anim-target fade-up">
+          <h2 class="section-title">Start Your Brand Journey</h2>
+          <br>
+          <a href="/contact/" class="cta-button magnetic">Contact Us</a>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

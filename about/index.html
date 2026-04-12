@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saath & Co - About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body class="theme-almond">
+    <div class="swirl-overlay"></div>
+    <nav class="navbar">
+      <a href="/" class="logo magnetic">SAATH & CO</a>
+      <div class="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/portfolio/">Portfolio</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="container hero"> <!-- No theme trigger initially -->
+        <div class="gradient-aura" style="top: 60%; left: 20%;"></div>
+        <div class="content anim-target fade-up">
+          <h1 class="headline reveal-text gradient-text" style="font-size: clamp(4rem, 10vw, 8rem);">About Us.</h1>
+          <p class="subheadline" style="font-size: 1.5rem; max-width: 600px;">
+            At Saath & Co, we don’t just build brands — we shape how they are seen, felt, and remembered.
+          </p>
+        </div>
+      </section>
+      
+      <section class="container section-pad">
+        <div class="split-layout">
+          <div class="anim-target fade-left">
+             <h2 class="section-title reveal-text">Our Purpose</h2>
+             <p class="section-text">
+               In a world heavily packed with noise, we saw too many brands trying to be louder, faster, and trendier, yet losing what truly makes them memorable. That’s where we found our purpose. We set out to build brands differently — not just as visual identities, but as experiences that are deeply understood.
+             </p>
+          </div>
+          <div class="image-container anim-target fade-right" style="overflow: hidden;">
+             <img src="/about_story.png" alt="Elegant minimal notebook" class="parallax-bg" data-speed="0.12">
+          </div>
+        </div>
+      </section>
+
+      <!-- Scroll trigger activated here! -->
+      <section class="container section-pad theme-trigger" style="margin-top: 4rem;">
+        <div class="split-layout">
+            <div class="anim-target fade-up">
+              <h3 class="reveal-text" style="font-size: 2.5rem; margin-bottom: 1rem; font-family: var(--font-heading);">Vision</h3>
+              <p class="section-text">Redefining branding by bringing together clarity and culture, creating distinct, timeless, and deeply resonant brands that leave a lasting impact.</p>
+            </div>
+            <div class="anim-target fade-up" style="transition-delay: 0.2s;">
+              <h3 class="reveal-text" style="font-size: 2.5rem; margin-bottom: 1rem; font-family: var(--font-heading);">Mission</h3>
+              <p class="section-text">To craft strategically strong brand foundations, design high-impact visual identities, and creating culturally relevant content that builds strong connections and narratives that go beyond marketing.</p>
+            </div>
+        </div>
+      </section>
+
+      <section class="container section-pad theme-trigger">
+        <div class="split-layout glass-panel">
+           <div class="anim-target scale-up" style="overflow: hidden; border-radius: 200px 200px 0 0;">
+             <img src="/founder_portrait.png" alt="Sathvica Portrait" class="parallax-bg" style="width: 100%; height: 120%; object-fit: cover;" data-speed="0.08">
+           </div>
+           <div class="anim-target fade-left">
+              <h2 class="section-title reveal-text" style="font-size: 2rem;">A Note from the Founder</h2>
+              <p class="section-text" style="font-style: italic;">
+                "Saath & Co began with a simple intention — to build brands with clarity, purpose, and meaning. In a world driven by noise and trends, we chose to focus on what truly lasts: honest storytelling, thoughtful design, and strong strategic thinking. Every brand we work with is a collaboration, shaped with care and intention. We’re here to create work that not only stands out, but stands for something."
+              </p>
+              <h4 style="font-family: var(--font-heading); font-size: 2.5rem; color: var(--golden-chamomile);">Sathvica</h4>
+           </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
