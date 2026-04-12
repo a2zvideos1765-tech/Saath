@@ -85,6 +85,22 @@ document.addEventListener('DOMContentLoaded', () => {
           el.addEventListener('mouseenter', () => cursorRing.classList.add('hovered'));
           el.addEventListener('mouseleave', () => cursorRing.classList.remove('hovered'));
       });
+  } else {
+      // Mobile Touch Flare Effect
+      document.addEventListener('touchstart', (e) => {
+          const touch = e.touches[0];
+          const flare = document.createElement('div');
+          flare.className = 'touch-flare';
+          flare.style.left = `${touch.clientX}px`;
+          flare.style.top = `${touch.clientY}px`;
+          
+          document.body.appendChild(flare);
+          
+          // Clean up after animation finishes (0.5s)
+          setTimeout(() => {
+              flare.remove();
+          }, 500);
+      }, { passive: true });
   }
 
   // --- Magnetic Elements ---
