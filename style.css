@@ -96,27 +96,23 @@ h1, h2, h3, h4, h5, h6, .logo {
   }
 }
 
-/* Mobile Touch Flare */
-.touch-flare {
+/* Mobile Touch Spark (Firecracker) */
+.touch-spark {
   position: fixed;
-  width: 30px;
-  height: 30px;
-  border: 1px solid var(--garnet-reserve);
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  width: 6px;
+  height: 6px;
+  background-color: var(--golden-chamomile);
   border-radius: 50%;
   pointer-events: none;
   z-index: 999999;
-  animation: flarePop 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation: sparkAnim 0.6s cubic-bezier(0, 0.9, 0.9, 1) forwards;
 }
-body.theme-garnet .touch-flare {
-  border-color: var(--almond-cream);
-  background-color: rgba(255, 255, 255, 0.1);
+body.theme-garnet .touch-spark {
+  background-color: var(--almond-cream);
 }
-@keyframes flarePop {
+@keyframes sparkAnim {
   0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-  100% { transform: translate(-50%, -50%) scale(4); opacity: 0; border-color: transparent; }
+  100% { transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(0); opacity: 0; }
 }
 
 /* Moving Gradients */
@@ -209,7 +205,7 @@ body.theme-almond .glass-panel {
   align-items: center;
   z-index: 100;
   pointer-events: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .navbar.menu-active {
   background-color: var(--almond-cream);
@@ -432,10 +428,20 @@ body { animation: pageFadeIn 0.8s ease-in forwards; }
 
 /* Media Queries */
 @media (max-width: 768px) {
-  .container { padding: 0 5vw; }
+  .container { padding: 0 8vw; }
   .section-pad { padding: 5rem 0; }
-  .navbar { padding: 2rem 5vw; }
-  .hero { min-height: 100svh; padding-top: 8rem; padding-bottom: 4rem; justify-content: center; }
+  .navbar { padding: 2rem 8vw; }
+  .hero { 
+    min-height: 100svh; 
+    padding-top: 25vh; 
+    padding-bottom: 8rem; 
+    justify-content: flex-start; /* Flow naturally from the top */
+  }
+  .hero .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   
   .menu-toggle { display: flex; }
   .nav-links {
@@ -464,4 +470,5 @@ body { animation: pageFadeIn 0.8s ease-in forwards; }
   .gradient-aura { width: 200vw; height: 200vw; opacity: 0.15; }
   
   .cta-button { padding: 1.2rem 2rem; width: 100%; text-align: center; }
+  .hero .cta-button { margin-top: 4rem; margin-bottom: 2rem; }
 }

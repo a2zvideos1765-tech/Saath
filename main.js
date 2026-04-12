@@ -10,6 +10,21 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.classList.toggle('menu-active');
   });
 
+  // --- Disappearing Navbar ---
+  let lastScrollY = window.scrollY;
+  window.addEventListener('scroll', () => {
+      if (navbar.classList.contains('menu-active')) return;
+      
+      // Hide if scrolling down past 80px, show if scrolling up
+      if (window.scrollY > lastScrollY && window.scrollY > 80) {
+          navbar.style.transform = 'translateY(-100%)';
+      } else {
+          navbar.style.transform = 'translateY(0)';
+      }
+      lastScrollY = window.scrollY;
+  }, { passive: true });
+
+
   // --- Scroll-triggered Theme ---
   const triggers = document.querySelectorAll('.theme-trigger');
   
