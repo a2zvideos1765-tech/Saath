@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css?v=3">
+    <link rel="stylesheet" href="/style.css?v=6">
   </head>
   <body class="theme-almond">
     <div class="swirl-overlay"></div>
@@ -26,10 +26,14 @@
       </ul>
     </nav>
     <main>
-      <section class="hero theme-trigger">
+      <section class="container section-pad theme-trigger" style="padding-top: 15vh;">
         <div class="content fade-up visible">
-          <h1 class="headline">Our Works</h1>
-          <p class="subheadline">Portfolio coming soon...</p>
+          <h1 class="headline gradient-text">Our Works</h1>
+          <p class="subheadline">A curated collection of our premium branding, design, and digital experiences.</p>
+        </div>
+        
+        <div id="portfolio-grid" class="portfolio-masonry">
+          <!-- Dynamically populated by JSON -->
         </div>
       </section>
       
@@ -41,5 +45,103 @@
       </section>
     </main>
     <script type="module" src="/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        try {
+          const response = await fetch('/portfolio_data.json');
+          let data = await response.json();
+          // User requirement: Max 30 items
+          data = data.slice(0, 30);
+          
+          const container = document.getElementById('portfolio-grid');
+          container.className = 'marquee-container';
+          
+          // IntersectionObserver for lazy reveal styling
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if(entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1 });
+          
+          // Generate 3 Marquee Tracks (Left, Right, Left)
+          const tracks = [];
+          const directions = ['left', 'right', 'left'];
+          
+          for (let i = 0; i < 3; i++) {
+            const track = document.createElement('div');
+            track.className = `marquee-track ${directions[i]}`;
+            
+            // Generate two synchronized inner wrappers to achieve flawless seamless looping
+            const inner1 = document.createElement('div');
+            inner1.className = 'marquee-inner';
+            const inner2 = document.createElement('div');
+            inner2.className = 'marquee-inner';
+            
+            track.appendChild(inner1);
+            track.appendChild(inner2);
+            container.appendChild(track);
+            tracks.push({ track, inner1, inner2 });
+          }
+          
+          // Distribute the 30 items evenly across the 3 tracks
+          data.forEach((item, index) => {
+            const trackIndex = index % 3; // Round-robin to ensure mixed media
+            const targetTrack = tracks[trackIndex];
+            
+            // Build the primary Media Element
+            const wrapper = document.createElement('div');
+            wrapper.className = 'marquee-item';
+            
+            let mediaEl;
+            if (item.type === 'video') {
+              mediaEl = document.createElement('video');
+              mediaEl.src = item.src;
+              mediaEl.autoplay = true;
+              mediaEl.loop = true;
+              mediaEl.muted = true;
+              mediaEl.playsInline = true;
+              mediaEl.className = 'marquee-media';
+              /* Preload metadata for instant UI structure, lazyload heavy playback */
+              mediaEl.preload = 'metadata'; 
+              mediaEl.addEventListener('loadeddata', () => mediaEl.classList.add('loaded'));
+            } else {
+              mediaEl = document.createElement('img');
+              mediaEl.src = item.src;
+              mediaEl.alt = item.alt; 
+              // Using native browser lazyloading satisfies "rest loaded slowly" requirement 
+              // automatically ensuring the first visible limits aren't starved.
+              mediaEl.loading = 'lazy'; 
+              mediaEl.className = 'marquee-media';
+              mediaEl.addEventListener('load', () => mediaEl.classList.add('loaded'));
+            }
+            
+            wrapper.appendChild(mediaEl);
+            
+            // Append to both inners to create a perfect mirror for endless 50% scrolling
+            targetTrack.inner1.appendChild(wrapper);
+            targetTrack.inner2.appendChild(wrapper.cloneNode(true));
+          });
+          
+          // Post-processing: Make sure cloned videos also play and add loaded styling correctly 
+          // (Wait for DOM injection, then query clones)
+          setTimeout(() => {
+             document.querySelectorAll('.marquee-item video').forEach(v => {
+                if(v.readyState >= 1) v.classList.add('loaded'); // Already loaded fallback
+                v.addEventListener('loadeddata', () => v.classList.add('loaded'));
+             });
+             document.querySelectorAll('.marquee-item img').forEach(img => {
+                if(img.complete) img.classList.add('loaded');
+                img.addEventListener('load', () => img.classList.add('loaded'));
+             });
+          }, 100);
+          
+        } catch (e) {
+          console.error('Error loading marquee:', e);
+        }
+      });
+    </script>
   </body>
 </html>
