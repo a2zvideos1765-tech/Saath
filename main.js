@@ -33,8 +33,9 @@ window.addEventListener('load', () => {
             }, 800);
         }
     }, 500);
+});
 
-    document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
         // --- Mobile Navigation ---
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
@@ -218,4 +219,4 @@ window.addEventListener('load', () => {
                 el.style.transform = `translateY(${yPos}px) scale(1.1)`;
             });
         }, { passive: true });
-    });
+});
