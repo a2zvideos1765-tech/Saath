@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saath & Co - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
@@ -37,13 +38,83 @@
         </div>
       </section>
       
-      <section class="contact theme-trigger">
-        <div class="content fade-up">
+      <!-- Brands We've Worked With -->
+      <section class="container section-pad theme-trigger" style="text-align: center;">
+        <h2 class="section-title reveal-text" style="font-size: 2.5rem; margin-bottom: 3rem;">Brands We've Worked With</h2>
+        <div class="brands-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4rem; opacity: 0.6; align-items: center;">
+          <h3 style="font-family: var(--font-heading); font-size: 2.5rem; letter-spacing: 2px;">VOGUE</h3>
+          <h3 style="font-family: var(--font-heading); font-size: 2.5rem; letter-spacing: 2px;">L'ORÉAL</h3>
+          <h3 style="font-family: var(--font-heading); font-size: 2.5rem; letter-spacing: 2px;">CHANEL</h3>
+          <h3 style="font-family: var(--font-heading); font-size: 2.5rem; letter-spacing: 2px;">HERMÈS</h3>
+          <h3 style="font-family: var(--font-heading); font-size: 2.5rem; letter-spacing: 2px;">CARTIER</h3>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="container section-pad theme-trigger">
+        <h2 class="section-title reveal-text" style="font-size: 2.5rem; text-align: center; margin-bottom: 4rem;">Client Stories</h2>
+        <div class="glass-grid">
+          <div class="glass-panel anim-target fade-up" style="padding: 3rem;">
+            <div class="stars" style="color: var(--golden-chamomile); font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; font-style: italic;">
+              "Saath & Co completely transformed our brand identity. Their strategic approach and stunning visual design elevated our presence in the market beyond our expectations. Truly a premium experience from start to finish."
+            </p>
+            <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--golden-chamomile);">~ Niranjan</h4>
+          </div>
+
+          <div class="glass-panel anim-target fade-up" style="padding: 3rem; transition-delay: 0.2s;">
+            <div class="stars" style="color: var(--golden-chamomile); font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; font-style: italic;">
+              "Working with this team was an absolute dream. They understood our vision immediately and crafted a narrative that resonated perfectly with our target audience. The attention to detail is unmatched."
+            </p>
+            <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--golden-chamomile);">~ Angha</h4>
+          </div>
+
+          <div class="glass-panel anim-target fade-up" style="padding: 3rem; transition-delay: 0.4s;">
+            <div class="stars" style="color: var(--golden-chamomile); font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; font-style: italic;">
+              "They don't just create logos; they build entire worlds. The cohesive design systems and storytelling frameworks they delivered have given us so much clarity. Highly recommend Saath & Co."
+            </p>
+            <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--golden-chamomile);">~ Tessa</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section-pad theme-trigger" style="text-align: center;">
+        <div class="content anim-target fade-up">
           <h2 class="section-title">Start Your Brand Journey</h2>
-          <a href="/contact" class="cta-button">Contact Us</a>
+          <a href="/contact" class="cta-button magnetic" style="margin-top: 2rem;">Contact Us</a>
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="logo magnetic"><img src="/saath_logo_transparent..png" alt="Saath & Co" class="nav-logo-img"></a>
+            <p>Designing brands that are built to be remembered.</p>
+          </div>
+          <div class="footer-links-col">
+            <h4>Explore</h4>
+            <a href="/">Home</a>
+            <a href="/about/">About Us</a>
+            <a href="/services/">Services</a>
+          </div>
+          <div class="footer-links-col">
+            <h4>Connect</h4>
+            <a href="/portfolio/">Portfolio</a>
+            <a href="/contact/">Contact</a>
+            <a href="https://www.instagram.com/saathandco_official/" target="_blank">Instagram</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Saath & Co. All rights reserved.</p>
+          <p>Built by <a href="https://studiohappens.tech" target="_blank" class="magnetic">StudioHappens</a></p>
+        </div>
+      </div>
+    </footer>
+
     <script type="module" src="/main.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', async () => {

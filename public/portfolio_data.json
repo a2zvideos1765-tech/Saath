@@ -1,182 +1,200 @@
 [
   {
-    "src": "/portfolio_assets/portfolio_item_1.mp4",
-    "type": "video",
-    "alt": "Saath and Co Brand Identity Portfolio Item 1",
-    "originalName": "Mockups for website  (1).mp4"
+    "src": "/portfolio_assets/portfolio_item_1.webp",
+    "type": "image",
+    "alt": "Saath and Co Portfolio Image 1",
+    "originalName": "11adebe7-668f-4f83-be66-99634347fef0.png"
   },
   {
-    "src": "/portfolio_assets/portfolio_item_2.mp4",
-    "type": "video",
-    "alt": "Saath and Co Brand Identity Portfolio Item 2",
-    "originalName": "Mockups for website  (10).mp4"
+    "src": "/portfolio_assets/portfolio_item_2.webp",
+    "type": "image",
+    "alt": "Saath and Co Portfolio Image 2",
+    "originalName": "13.jpg"
   },
   {
-    "src": "/portfolio_assets/portfolio_item_3.mp4",
-    "type": "video",
-    "alt": "Saath and Co Brand Identity Portfolio Item 3",
-    "originalName": "Mockups for website  (11).mp4"
+    "src": "/portfolio_assets/portfolio_item_3.webp",
+    "type": "image",
+    "alt": "Saath and Co Portfolio Image 3",
+    "originalName": "1585e5d9-bf95-4670-9bb2-d199529cadbd.png"
   },
   {
-    "src": "/portfolio_assets/portfolio_item_4.mp4",
-    "type": "video",
-    "alt": "Saath and Co Brand Identity Portfolio Item 4",
-    "originalName": "Mockups for website  (2).mp4"
+    "src": "/portfolio_assets/portfolio_item_4.webp",
+    "type": "image",
+    "alt": "Saath and Co Portfolio Image 4",
+    "originalName": "16.jpg"
   },
   {
-    "src": "/portfolio_assets/portfolio_item_5.mp4",
-    "type": "video",
-    "alt": "Saath and Co Brand Identity Portfolio Item 5",
-    "originalName": "Mockups for website  (3).mp4"
+    "src": "/portfolio_assets/portfolio_item_5.webp",
+    "type": "image",
+    "alt": "Saath and Co Portfolio Image 5",
+    "originalName": "16f17a0f-8bcd-47ec-9b2d-e867553e61a4.png"
   },
   {
-    "src": "/portfolio_assets/portfolio_item_6.mp4",
-    "type": "video",
-    "alt": "Saath and Co Brand Identity Portfolio Item 6",
-    "originalName": "Mockups for website  (4).mp4"
+    "src": "/portfolio_assets/portfolio_item_6.webp",
+    "type": "image",
+    "alt": "Saath and Co Portfolio Image 6",
+    "originalName": "2.jpg"
   },
   {
-    "src": "/portfolio_assets/portfolio_item_7.mp4",
-    "type": "video",
-    "alt": "Saath and Co Brand Identity Portfolio Item 7",
-    "originalName": "Mockups for website  (5).mp4"
+    "src": "/portfolio_assets/portfolio_item_7.webp",
+    "type": "image",
+    "alt": "Saath and Co Portfolio Image 7",
+    "originalName": "21.jpg"
   },
   {
-    "src": "/portfolio_assets/portfolio_item_8.mp4",
-    "type": "video",
-    "alt": "Saath and Co Brand Identity Portfolio Item 8",
-    "originalName": "Mockups for website  (6).mp4"
+    "src": "/portfolio_assets/portfolio_item_8.webp",
+    "type": "image",
+    "alt": "Saath and Co Portfolio Image 8",
+    "originalName": "22.jpg"
   },
   {
-    "src": "/portfolio_assets/portfolio_item_9.mp4",
-    "type": "video",
-    "alt": "Saath and Co Brand Identity Portfolio Item 9",
-    "originalName": "Mockups for website  (7).mp4"
+    "src": "/portfolio_assets/portfolio_item_9.webp",
+    "type": "image",
+    "alt": "Saath and Co Portfolio Image 9",
+    "originalName": "23.jpg"
   },
   {
-    "src": "/portfolio_assets/portfolio_item_10.mp4",
-    "type": "video",
-    "alt": "Saath and Co Brand Identity Portfolio Item 10",
-    "originalName": "Mockups for website  (8).mp4"
+    "src": "/portfolio_assets/portfolio_item_10.webp",
+    "type": "image",
+    "alt": "Saath and Co Portfolio Image 10",
+    "originalName": "24.jpg"
   },
   {
-    "src": "/portfolio_assets/portfolio_item_11.mp4",
-    "type": "video",
-    "alt": "Saath and Co Brand Identity Portfolio Item 11",
-    "originalName": "Mockups for website  (9).mp4"
+    "src": "/portfolio_assets/portfolio_item_11.webp",
+    "type": "image",
+    "alt": "Saath and Co Portfolio Image 11",
+    "originalName": "25.jpg"
   },
   {
     "src": "/portfolio_assets/portfolio_item_12.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 12",
-    "originalName": "1.jpg"
+    "alt": "Saath and Co Portfolio Image 12",
+    "originalName": "281958f2-77e6-4ecd-a40c-51195fdb816a.png"
   },
   {
     "src": "/portfolio_assets/portfolio_item_13.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 13",
-    "originalName": "12.jpg"
+    "alt": "Saath and Co Portfolio Image 13",
+    "originalName": "3.jpg"
   },
   {
     "src": "/portfolio_assets/portfolio_item_14.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 14",
-    "originalName": "13.jpg"
+    "alt": "Saath and Co Portfolio Image 14",
+    "originalName": "30.jpg"
   },
   {
     "src": "/portfolio_assets/portfolio_item_15.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 15",
-    "originalName": "14.jpg"
+    "alt": "Saath and Co Portfolio Image 15",
+    "originalName": "31.jpg"
   },
   {
     "src": "/portfolio_assets/portfolio_item_16.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 16",
-    "originalName": "15.jpg"
+    "alt": "Saath and Co Portfolio Image 16",
+    "originalName": "32.jpg"
   },
   {
     "src": "/portfolio_assets/portfolio_item_17.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 17",
-    "originalName": "16.jpg"
+    "alt": "Saath and Co Portfolio Image 17",
+    "originalName": "3280ca63-6e56-486b-ad3b-52c0a732b17d.png"
   },
   {
     "src": "/portfolio_assets/portfolio_item_18.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 18",
-    "originalName": "17.jpg"
+    "alt": "Saath and Co Portfolio Image 18",
+    "originalName": "34.jpg"
   },
   {
     "src": "/portfolio_assets/portfolio_item_19.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 19",
-    "originalName": "2.jpg"
+    "alt": "Saath and Co Portfolio Image 19",
+    "originalName": "38.jpg"
   },
   {
     "src": "/portfolio_assets/portfolio_item_20.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 20",
-    "originalName": "20.jpg"
+    "alt": "Saath and Co Portfolio Image 20",
+    "originalName": "39.jpg"
   },
   {
     "src": "/portfolio_assets/portfolio_item_21.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 21",
-    "originalName": "21.jpg"
+    "alt": "Saath and Co Portfolio Image 21",
+    "originalName": "4.jpg"
   },
   {
     "src": "/portfolio_assets/portfolio_item_22.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 22",
-    "originalName": "22.jpg"
+    "alt": "Saath and Co Portfolio Image 22",
+    "originalName": "42.jpg"
   },
   {
     "src": "/portfolio_assets/portfolio_item_23.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 23",
-    "originalName": "23.jpg"
+    "alt": "Saath and Co Portfolio Image 23",
+    "originalName": "43a0c5e0-4426-4019-ab35-465eb273694b.png"
   },
   {
     "src": "/portfolio_assets/portfolio_item_24.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 24",
-    "originalName": "24.jpg"
+    "alt": "Saath and Co Portfolio Image 24",
+    "originalName": "5.jpg"
   },
   {
     "src": "/portfolio_assets/portfolio_item_25.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 25",
-    "originalName": "25.jpg"
+    "alt": "Saath and Co Portfolio Image 25",
+    "originalName": "65be74f5-0338-4e74-898a-1091ee1fec1c.png"
   },
   {
     "src": "/portfolio_assets/portfolio_item_26.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 26",
-    "originalName": "29.jpg"
+    "alt": "Saath and Co Portfolio Image 26",
+    "originalName": "a124b7db-d204-456d-9115-8f19a9731c85.png"
   },
   {
-    "src": "/portfolio_assets/portfolio_item_27.webp",
-    "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 27",
-    "originalName": "3.jpg"
+    "src": "/portfolio_assets/portfolio_item_27.mp4",
+    "type": "video",
+    "alt": "Saath and Co Portfolio Video 27",
+    "originalName": "AIVideo_260328_c9abd8c1-159a-4285-b66e-bba1b5c293d9_0_MiriCanvas.mp4"
   },
   {
     "src": "/portfolio_assets/portfolio_item_28.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 28",
-    "originalName": "30.jpg"
+    "alt": "Saath and Co Portfolio Image 28",
+    "originalName": "b10b4048-b7df-4ec9-b432-395af2b5d9ee.png"
   },
   {
     "src": "/portfolio_assets/portfolio_item_29.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 29",
-    "originalName": "31.jpg"
+    "alt": "Saath and Co Portfolio Image 29",
+    "originalName": "e9fd3ea5-358a-4669-905f-2108c1aafe9c.png"
   },
   {
     "src": "/portfolio_assets/portfolio_item_30.webp",
     "type": "image",
-    "alt": "Saath and Co Brand Identity Portfolio Item 30",
-    "originalName": "32.jpg"
+    "alt": "Saath and Co Portfolio Image 30",
+    "originalName": "eeaef66b-9171-43f6-9f4c-a4ba73d9a095.png"
+  },
+  {
+    "src": "/portfolio_assets/portfolio_item_31.webp",
+    "type": "image",
+    "alt": "Saath and Co Portfolio Image 31",
+    "originalName": "f846fe0b-9c8f-41cf-8840-ad07d346b8aa.png"
+  },
+  {
+    "src": "/portfolio_assets/portfolio_item_32.webp",
+    "type": "image",
+    "alt": "Saath and Co Portfolio Image 32",
+    "originalName": "Gemini_Generated_Image_1tt9r41tt9r41tt9.png"
+  },
+  {
+    "src": "/portfolio_assets/portfolio_item_33.mp4",
+    "type": "video",
+    "alt": "Saath and Co Portfolio Video 33",
+    "originalName": "Video Project 2.mp4"
   }
 ]
