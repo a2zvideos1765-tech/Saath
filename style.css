@@ -116,6 +116,47 @@ body.theme-garnet {
   color: var(--almond-cream);
 }
 
+/* --- Fixed Grid Background (à la Nothing) --- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  /* Fine grid: two overlapping linear-gradients forming crosshatch lines */
+  background-image:
+    linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+/* Ensure every direct child stacks above the grid */
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Grid line color per theme */
+body.theme-almond {
+  --grid-line-color: rgba(76, 0, 19, 0.07);
+}
+
+body.theme-garnet {
+  --grid-line-color: rgba(240, 234, 216, 0.06);
+}
+
+/* Grid must also show through the loader */
+.global-loader {
+  --grid-line-color: rgba(76, 0, 19, 0.07);
+}
+body.theme-garnet .global-loader {
+  --grid-line-color: rgba(240, 234, 216, 0.06);
+}
+
+
 h1,
 h2,
 h3,
@@ -294,7 +335,7 @@ body.theme-garnet .gradient-aura {
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  padding: 4rem;
+  padding: 2.5rem;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
@@ -451,11 +492,11 @@ body.theme-garnet .menu-toggle .bar {
 }
 
 .hero {
-  min-height: 90vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
-  padding-top: 8rem;
-  padding-bottom: 4rem;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
   position: relative;
 }
 
@@ -481,9 +522,9 @@ body.theme-garnet .menu-toggle .bar {
 }
 
 .image-hero {
-  margin-top: 4rem;
+  margin-top: 1.5rem;
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   border-radius: 12px;
   overflow: hidden;
   position: relative;
@@ -504,8 +545,8 @@ body.theme-garnet .menu-toggle .bar {
 
 /* Sections */
 .section-pad {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   position: relative;
   z-index: 2;
 }
@@ -548,8 +589,8 @@ body.theme-garnet .menu-toggle .bar {
 .staggered-list {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
-  margin-top: 8rem;
+  gap: 4rem;
+  margin-top: 4rem;
 }
 
 .staggered-item {
@@ -618,9 +659,16 @@ body.theme-garnet .menu-toggle .bar {
   font-size: 0.9rem;
   text-decoration: none;
   border-radius: 50px;
-  transition: all 0.4s var(--transition-easing);
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1),
+              background-position 400ms ease;
   background-size: 200% auto;
   border: 1px solid transparent;
+}
+
+.cta-button:active {
+  transform: scale(0.97);
+  transition: transform 100ms ease-out;
 }
 
 body.theme-almond .cta-button {
@@ -630,8 +678,8 @@ body.theme-almond .cta-button {
 
 body.theme-almond .cta-button:hover {
   background-position: right center;
-  box-shadow: 0 10px 30px rgba(76, 0, 19, 0.3);
-  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(76, 0, 19, 0.25);
+  transform: translateY(-3px);
 }
 
 body.theme-garnet .cta-button {
@@ -641,18 +689,19 @@ body.theme-garnet .cta-button {
 
 body.theme-garnet .cta-button:hover {
   background-position: right center;
-  box-shadow: 0 10px 30px rgba(240, 234, 216, 0.2);
-  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(240, 234, 216, 0.15);
+  transform: translateY(-3px);
 }
 
 /* Animations */
 .anim-target {
-  transition: opacity 1s var(--transition-easing), transform 1s var(--transition-easing);
+  transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+              transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .fade-up {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(24px);
 }
 
 .fade-up.visible {
@@ -662,7 +711,7 @@ body.theme-garnet .cta-button:hover {
 
 .fade-left {
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateX(-24px);
 }
 
 .fade-left.visible {
@@ -672,7 +721,7 @@ body.theme-garnet .cta-button:hover {
 
 .fade-right {
   opacity: 0;
-  transform: translateX(50px);
+  transform: translateX(24px);
 }
 
 .fade-right.visible {
